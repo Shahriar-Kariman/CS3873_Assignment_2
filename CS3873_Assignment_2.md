@@ -103,3 +103,51 @@ sequenceDiagram
 ```
 
 Since we are ignoring transmission time then we essntially can think of the time between the the request for Obj1 and response for Obj6 equal to $1 {RTT}_w$ which make the total time about 3  round trip time.
+
+## Question 4 - Alice on BitTorrent
+
+In BitTorrent a peers pick one additonal peer outside of the top four to send data to send data to, so even if Alice has on chuncks someone will eventually send her one and then she can start sharing hers. So she really just needs to wait.
+
+## Question 5 - Distributing a File
+
+First lets get the constants right.
+
+$$
+\begin{split}
+  F = 20 \times 10^9 {bits}
+  \\
+  u_s = 10^9 {bps}
+  \\
+  d_i = 50 \times 10^6 {bps}
+  \\
+  u_i \rightarrow in \ the \ table
+\end{split}
+$$
+
+### Distribution Time for Client-Server
+
+$$
+\begin{split}
+  d_{cs} = max(\frac{N\times F}{u_s}, \frac{F}{d_i})
+\end{split}
+$$
+
+Notice how the speed for client-server architecture doesnt depend on $u_i$ so i can just get rid of the column on the left.
+
+| N = 10 | N = 100    | N = 1000    |
+|--------|------------|-------------|
+|  400   |    2000    |    20000    |
+
+### Distribution Time for Peer-to-Peer
+
+$$
+\begin{split}
+  d_{P2P} = max(\frac{F}{u_s}, \frac{N \times F}{u_s + N \times u_i}, \frac{F}{d_i})
+\end{split}
+$$
+
+| ui (Mbps) | N = 10 | N = 100 | N = 1000 |
+|-----------|--------|---------|----------|
+| 0.5       |        |         |          |
+| 5         |        |         |          |
+| 25        |        |         |          |
