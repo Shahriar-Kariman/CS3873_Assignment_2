@@ -3,7 +3,7 @@
 
 <ol style="list-style-type: upper-alpha">
   <li>False very false first you get one response message then you find out you need to send 3 more responses.</li>
-  <li>False it is litterally in the name non-persistent.</li>
+  <li>False it is literally in the name non-persistent.</li>
   <li>False that is the date the response was generated.</li>
   <li>False the reply to an if modified request will not have a body if the file hadn't been modified.</li>
 </ol>
@@ -26,7 +26,7 @@ The browser is using persistent connection hence why we see `connection:keep-ali
 
 The file requested is `index.html` which is an html file.
 
-## Question 3 - Elapsed Time for Web Page Retrival
+## Question 3 - Elapsed Time for Web Page Retrieval
 
 ### Part A - Non-Persistent & Non-Parallel HTTP
 
@@ -102,11 +102,11 @@ sequenceDiagram
   Server->>Client: HTTP Response (Obj6)
 ```
 
-Since we are ignoring transmission time then we essntially can think of the time between the the request for Obj1 and response for Obj6 equal to $1 {RTT}_w$ which make the total time about 3  round trip time.
+Since we are ignoring transmission time then we essentially can think of the time between the the request for Obj1 and response for Obj6 equal to $1 {RTT}_w$ which make the total time about 3  round trip time.
 
 ## Question 4 - Alice on BitTorrent
 
-In BitTorrent a peers pick one additonal peer outside of the top four to send data to send data to, so even if Alice has on chuncks someone will eventually send her one and then she can start sharing hers. So she really just needs to wait.
+In BitTorrent a peers pick one additional peer outside of the top four to send data to send data to, so even if Alice has on chucks someone will eventually send her one and then she can start sharing hers. So she really just needs to wait.
 
 ## Question 5 - Distributing a File
 
@@ -132,7 +132,7 @@ $$
 \end{split}
 $$
 
-Notice how the speed for client-server architecture doesnt depend on $u_i$ so i can just get rid of the column on the left.
+Notice how the speed for client-server architecture doesn't depend on $u_i$ so i can just get rid of the column on the left.
 
 | N = 10 | N = 100    | N = 1000    |
 |--------|------------|-------------|
@@ -146,7 +146,7 @@ $$
 \end{split}
 $$
 
-And notibly $\frac{F}{u_s}$ and $\frac{F}{d_i}$ stay constant so I only have to recalculate $\frac{N \times F}{u_s + N \times u_i}$ and compare.
+And notably $\frac{F}{u_s}$ and $\frac{F}{d_i}$ stay constant so I only have to recalculate $\frac{N \times F}{u_s + N \times u_i}$ and compare.
 
 | ui (Mbps) | N = 10 | N = 100 | N = 1000 |
 |-----------|--------|---------|----------|
