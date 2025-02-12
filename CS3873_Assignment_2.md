@@ -114,13 +114,13 @@ First lets get the constants right.
 
 $$
 \begin{split}
-  F = 20 \times 10^9 {bits}
+  F = 20 \times 10^9 {bytes} = 160 \times 10^9 {bits}
   \\
   u_s = 10^9 {bps}
   \\
   d_i = 50 \times 10^6 {bps}
   \\
-  u_i \rightarrow in \ the \ table
+  u_i \rightarrow in \ the \ tables
 \end{split}
 $$
 
@@ -136,7 +136,7 @@ Notice how the speed for client-server architecture doesnt depend on $u_i$ so i 
 
 | N = 10 | N = 100    | N = 1000    |
 |--------|------------|-------------|
-|  400   |    2000    |    20000    |
+|  3200  |   16000    |    160000   |
 
 ### Distribution Time for Peer-to-Peer
 
@@ -146,8 +146,10 @@ $$
 \end{split}
 $$
 
+And notibly $\frac{F}{u_s}$ and $\frac{F}{d_i}$ stay constant so I only have to recalculate $\frac{N \times F}{u_s + N \times u_i}$ and compare.
+
 | ui (Mbps) | N = 10 | N = 100 | N = 1000 |
 |-----------|--------|---------|----------|
-| 0.5       |        |         |          |
-| 5         |        |         |          |
-| 25        |        |         |          |
+| 0.5       | 3200   |  15238  |  10667   |
+| 5         | 3200   |  10667  |  26667   |
+| 25        | 3200   |  4571   |  6154    |
